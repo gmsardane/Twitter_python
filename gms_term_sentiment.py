@@ -2,6 +2,10 @@ from __future__ import division
 import sys
 import json
 
+"""
+Usage: ipython gms_term_sentiment.py AFINN-111.txt out_twitter_stream.txt 
+
+"""
 
 def read_sent(afinnfile):
    afinnfile = open(afinnfile)
