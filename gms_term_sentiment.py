@@ -4,7 +4,6 @@ import json
 
 """
 Usage: ipython gms_term_sentiment.py AFINN-111.txt out_twitter_stream.txt 
-
 """
 
 def read_sent(afinnfile):
@@ -26,10 +25,11 @@ def read_tweets(tweet_file):
     
 #Affin words   
 def getscores(scores, tweet):
-    sum = 0.0
+    val = []
     for word in tweet.split():
-        sum += scores.get(word,0) 
-    return sum
+        val.append(scores.get(word,0))
+    total = sum(val)
+    return total
 
 #Non-dict words
 def getmorewords(scores, tweet):
